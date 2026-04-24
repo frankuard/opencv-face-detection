@@ -20,7 +20,7 @@ for path in image_path:
         cv2.rectangle(image, (x,y), (x+w,y+h), (0,255,0), 2)
     
         roi_gray = gray[y:y+h, x:x+w]
-        roi_image = image[y:y+h]
+        roi_image = image[y:y+h, x:x+w]
     
         eyes = eye_cascade.detectMultiScale(roi_gray,1.1,10)
     
@@ -36,7 +36,7 @@ for path in image_path:
         else: 
             cv2.putText(image,"Smile Not Detected", (x,y-10), cv2.FONT_HERSHEY_SIMPLEX,0.6, (0,255,0), 2)
     
-    cv2.imshow(path, image)
+    cv2.imshow("Photo Detection", image)
     cv2.waitKey(0)
     
 cv2.destroyAllWindows() 

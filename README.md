@@ -29,7 +29,7 @@ The project uses **Haar Cascade Classifiers** to detect features:
 
 ### 1. Install dependencies
 ```bash
-pip install opencv-python
+pip install -r requirements.txt
 ```
 
 --- 
@@ -96,6 +96,8 @@ python photo_detect.py
 
 Roshan Karki
 AI/ML Learner🚀
+
+---
 
 ### 📜 License
 
